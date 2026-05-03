@@ -1,0 +1,655 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavuk Mahajan</title>
+<link rel="icon" type="image/png" href="ADD_FAVICON_HERE.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a2744'/%3E%3Ctext x='2' y='23' font-family='Georgia%2C serif' font-size='17' font-weight='700' fill='%232a9d8f'%3EB%3C/text%3E%3Ctext x='15' y='23' font-family='Georgia%2C serif' font-size='17' font-weight='700' fill='%23ffffff'%3EM%3C/text%3E%3C/svg%3E"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:#040409;color:white;overflow-x:hidden}
+:root{--cyan:#31f2ff;--violet:#8a5cff;--glass:rgba(255,255,255,0.035);--line:rgba(255,255,255,0.08);--muted:#b7bdd3}
+#particles-js{position:fixed;width:100%;height:100%;z-index:-3;top:0;left:0}
+body::before{content:'';position:fixed;width:450px;height:450px;background:rgba(0,255,255,0.07);filter:blur(140px);left:-100px;top:10%;z-index:-2}
+body::after{content:'';position:fixed;width:450px;height:450px;background:rgba(138,92,255,0.07);filter:blur(140px);right:-100px;bottom:10%;z-index:-2}
+nav{position:fixed;top:0;left:0;width:100%;padding:15px 7%;display:flex;justify-content:space-between;align-items:center;background:rgba(4,4,9,0.75);backdrop-filter:blur(12px);z-index:999;border-bottom:1px solid rgba(255,255,255,0.04)}
+.logo{font-family:'Orbitron';font-size:22px;font-weight:800}
+.logo span{color:var(--cyan)}
+nav ul{display:flex;list-style:none;gap:22px}
+nav ul li a{color:#dbe3ff;text-decoration:none;font-size:10px;letter-spacing:1px;transition:.3s}
+nav ul li a:hover{color:var(--cyan)}
+section{padding:72px 8%}
+.sec-title{text-align:center;margin-bottom:32px;position:relative}
+.sec-title::after{content:'';width:90px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));position:absolute;left:50%;transform:translateX(-50%);bottom:-12px}
+.sec-title p{color:var(--cyan);letter-spacing:4px;font-size:9px}
+.sec-title h2{font-family:'Orbitron';font-size:24px;margin-top:8px}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px;padding:105px 8% 55px}
+.hero-left h1{font-family:'Orbitron';font-size:68px;line-height:1.02;letter-spacing:2px;margin:10px 0}
+.hero-left h1 span{background:linear-gradient(90deg,var(--cyan),var(--violet),white);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-left small{font-size:10px;letter-spacing:4px;color:var(--cyan)}
+.hero-left h3{font-size:16px;font-weight:500;margin-bottom:12px;color:#e9eeff}
+.hero-left p{font-size:12px;line-height:1.8;color:var(--muted);max-width:620px}
+.social-row{display:flex;gap:18px;margin:18px 0}
+.social-row a{font-size:18px;color:var(--cyan)}
+.hero-btns{display:flex;gap:14px;margin-top:14px}
+.btn{padding:11px 22px;border-radius:40px;font-size:12px;font-weight:700;text-decoration:none}
+.btn1{background:linear-gradient(90deg,var(--cyan),var(--violet));color:#05050b}
+.btn2{border:1px solid var(--line);color:white}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.metric{background:var(--glass);border:1px solid var(--line);border-radius:20px;min-height:108px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.4s}
+.metric:hover,.about-card:hover,.timeline-card:hover,.project-card:hover,.contact-box:hover,.brand-box:hover,.skill:hover{transform:translateY(-7px);box-shadow:0 0 24px rgba(49,242,255,0.08)}
+.metric h2{
+font-size:21px;
+color:var(--cyan);
+text-align:center;
+line-height:1.2;
+}
+.metric p{font-size:10px;margin-top:5px}
+.about-grid,.skills-grid,.brand-grid,.projects-grid{display:grid;gap:18px}
+.about-grid{grid-template-columns:repeat(3,1fr)}
+.skills-grid{grid-template-columns:repeat(4,1fr)}
+.brand-grid{grid-template-columns:repeat(3,1fr)}
+.projects-grid{grid-template-columns:repeat(2,1fr)}
+.about-card,.timeline-card,.project-card,.contact-box,.brand-box,.skill{background:var(--glass);border:1px solid var(--line);border-radius:20px;transition:.4s}
+.about-card{padding:22px;min-height:175px}
+.about-card h3{font-size:16px;color:var(--cyan);margin-bottom:10px}
+.about-card p{font-size:12px;line-height:1.7;color:var(--muted)}
+.skill{height:72px;display:flex;justify-content:center;align-items:center;font-size:12px;font-weight:600;text-align:center;padding:10px}
+.timeline{display:flex;flex-direction:column;gap:18px}
+.timeline-card{padding:22px;min-height:170px}
+.timeline-card h3{font-size:17px;color:var(--cyan);margin-bottom:10px}
+.timeline-card p{font-size:12px;line-height:1.85;color:var(--muted)}
+.project-card{overflow:hidden}
+.project-top{height:90px;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Orbitron';font-size:17px;background:linear-gradient(135deg,rgba(49,242,255,0.15),rgba(138,92,255,0.15))}
+.project-body{padding:18px}
+.project-mini{font-size:9px;letter-spacing:3px;color:var(--cyan);margin-bottom:8px}
+.project-title{font-size:15px;color:var(--cyan);margin-bottom:8px}
+.project-desc{font-size:11px;line-height:1.8;color:var(--muted);margin-bottom:12px}
+.tech-stack{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.tech-stack span{padding:5px 10px;border-radius:20px;font-size:9px;border:1px solid rgba(49,242,255,0.2)}
+.git-btn{display:inline-block;padding:9px 15px;border-radius:30px;font-size:10px;font-weight:700;text-decoration:none;background:linear-gradient(90deg,var(--cyan),var(--violet));color:#05050b}
+.brand-box{height:115px;display:flex;align-items:center;justify-content:center;padding:14px}
+.brand-box img{max-width:125px;max-height:62px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-box{padding:22px;min-height:300px}
+.contact-box h3{font-size:18px;color:var(--cyan);margin-bottom:14px}
+.contact-box a{display:block;color:white;text-decoration:none;font-size:12px;margin:12px 0}
+.contact-box a i{margin-right:10px;color:var(--cyan)}
+input,textarea{width:100%;padding:11px;background:#0b0b14;border:1px solid rgba(255,255,255,0.08);color:white;border-radius:10px;margin-bottom:10px;font-size:12px}
+textarea{height:95px}
+footer{text-align:center;padding:22px;font-size:10px;color:#9ea5c3}
+.reveal{opacity:0;transform:translateY(60px);transition:1s}
+.reveal.active{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<canvas id="particles-js"></canvas>
+
+<nav>
+<div class="logo">B<span>M</span></div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#brands">Brands</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#leadership">Leadership</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-left reveal">
+<small>SOFTWARE • AI • BUSINESS</small>
+<h1>BHAVUK<br><span>MAHAJAN</span></h1>
+<h3>Building Products. Closing Partnerships. Leading Execution.</h3>
+<p>Computer Engineering student at TIET building scalable software systems, AI-powered products, and measurable business impact through strategic sponsorships, brand collaborations, and leadership execution.</p>
+<div class="social-row">
+<a href="https://www.linkedin.com/in/bhavuk-m007/" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/bhavukm007" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://leetcode.com/u/bhavukm007/" target="_blank"><i class="fas fa-code"></i></a>
+<a href="https://www.instagram.com/bhavukm007/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+<div class="hero-btns">
+<a href="#contact" class="btn btn1">Hire / Connect</a>
+<a href="#projects" class="btn btn2">Explore Work</a>
+</div>
+</div>
+<div class="metrics reveal">
+
+<div class="metric"><h2 class="counter cgpa" data-target="9.13">0</h2><p>Current CGPA</p></div>
+
+<div class="metric"><h2 class="counter amazon" data-target="5">0</h2><p>Amazon ML Summer School</p></div>
+
+<div class="metric"><h2 class="counter sponsor" data-target="10">0</h2><p>Sponsorships Closed</p></div>
+
+<div class="metric"><h2 class="counter normal" data-target="30">0</h2><p>Corporate Collaborations</p></div>
+
+<div class="metric"><h2 class="counter normal" data-target="2">0</h2><p>Industry Internships</p></div>
+
+<div class="metric"><h2 class="counter normal" data-target="150">0</h2><p>Students Coordinated</p></div>
+
+</div>
+</section>
+
+<section id="about">
+<div class="sec-title reveal"><p>WHO I AM</p><h2>Beyond The Conventional</h2></div>
+<div class="about-grid">
+<div class="about-card reveal"><h3>Engineering</h3><p>Strong command over backend architectures, AI pipelines, optimization engines, database-driven systems and deployment-oriented software product development.</p></div>
+<div class="about-card reveal"><h3>Business Acumen</h3><p>Hands-on experience in sponsorship acquisition, B2B outreach, proposal creation, pitch communication, strategic negotiations and deliverable execution.</p></div>
+<div class="about-card reveal"><h3>Leadership</h3><p>Led large student teams, managed institutional campaigns, handled recruit coordination and delivered measurable outreach impact through execution-first planning.</p></div>
+</div>
+</section>
+
+<section id="skills">
+<div class="sec-title reveal"><p>TECH ARSENAL</p><h2>Skills & Technologies</h2></div>
+<div class="skills-grid">
+<div class="skill reveal">Python / Flask</div><div class="skill reveal">C++ / SQL / C</div><div class="skill reveal">Machine Learning / GenAI</div><div class="skill reveal">NLP / LLMs</div>
+<div class="skill reveal">React / HTML / CSS / JS</div><div class="skill reveal">YOLOv8 / OpenCV</div><div class="skill reveal">PostgreSQL / DBMS</div><div class="skill reveal">Git / GitHub / APIs</div>
+<div class="skill reveal">Pandas / NumPy</div><div class="skill reveal">Data Structures</div><div class="skill reveal">Marketing / Negotiation</div><div class="skill reveal">Problem Solving</div>
+</div>
+</section>
+
+<section id="experience">
+<div class="sec-title reveal"><p>PROFESSIONAL EXPERIENCE</p><h2>Internships & Industry Exposure</h2></div>
+<div class="timeline">
+<div class="timeline-card reveal"><h3>Software Development Intern — RoboKing</h3><p>Worked extensively on Python-based backend engineering automation to streamline repetitive internal software workflows and reduce manual execution dependencies. Designed modular scripts for process acceleration, integrated runtime validation checkpoints for higher reliability, improved data handling logic, debugged automation bottlenecks, enhanced utility scalability, and contributed toward building cleaner maintainable internal systems used for day-to-day operational software efficiency.</p></div>
+<div class="timeline-card reveal"><h3>Data Analysis Intern — DevRhylme</h3><p>Performed large-scale business data preprocessing, structured normalization, segmentation analysis and trend extraction across campaign datasets to derive actionable performance insights. Generated analytical summaries, interpreted customer behavior patterns, assisted in business reporting dashboards, identified engagement anomalies, evaluated growth indicators, and supported strategic decisions through data-backed reporting and comparative performance interpretation.</p></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="sec-title reveal"><p>GITHUB ENGINEERING WORK</p><h2>Featured Projects</h2></div>
+<div class="projects-grid">
+<div class="project-card reveal"><div class="project-top">Real-Time Weapon<br>Detection System</div><div class="project-body"><div class="project-mini">AI • COMPUTER VISION</div><div class="project-title">Weapon Detection</div><div class="project-desc">AI-powered threat detection platform engineered for identifying weapons from uploaded visual frames using a scalable computer vision pipeline and modular backend.</div><div class="tech-stack"><span>React</span><span>TypeScript</span><span>Vite</span><span>Supabase</span></div><a href="https://github.com/bhavukm007/Weapon-Detection" target="_blank" class="git-btn">View on GitHub</a></div></div>
+<div class="project-card reveal"><div class="project-top">StreamX<br>OTT Platform</div><div class="project-body"><div class="project-mini">FULL STACK • DBMS</div><div class="project-title">StreamX OTT</div><div class="project-desc">Database-driven OTT content streaming prototype supporting authentication, subscription plans, admin content handling and optimized Flask server interactions.</div><div class="tech-stack"><span>Python</span><span>Flask</span><span>PostgreSQL</span><span>SQL</span></div><a href="https://github.com/bhavukm007/StreamX-OTT-Platform" target="_blank" class="git-btn">View on GitHub</a></div></div>
+<div class="project-card reveal"><div class="project-top">Fintech Payment<br>Gateway Dashboard</div><div class="project-body"><div class="project-mini">FINTECH • ML</div><div class="project-title">Payment Gateway Simulation</div><div class="project-desc">End-to-end fintech analytics system simulating payment queue behavior under transaction load with machine learning waiting time prediction dashboard.</div><div class="tech-stack"><span>Python</span><span>SimPy</span><span>ML</span><span>Flask</span></div><a href="https://github.com/bhavukm007/Fintech-Payment-Gateway-Simulation-Dashboard" target="_blank" class="git-btn">View on GitHub</a></div></div>
+<div class="project-card reveal"><div class="project-top">Route Optimization<br>System</div><div class="project-body"><div class="project-mini">AI • GRAPH ALGORITHMS</div><div class="project-title">Route Optimization</div><div class="project-desc">Map-based intelligent routing application using OSM extraction, shortest path computation, second-best route estimation and fuel cost analytics.</div><div class="tech-stack"><span>Python</span><span>OSMnx</span><span>NetworkX</span><span>Folium</span></div><a href="https://github.com/bhavukm007/Route-Optimization-Project" target="_blank" class="git-btn">View on GitHub</a></div></div>
+<div class="project-card reveal"><div class="project-top">TOPSIS Text<br>Summarization Engine</div><div class="project-body"><div class="project-mini">NLP • DECISION SCIENCE</div><div class="project-title">TOPSIS Summarizer</div><div class="project-desc">Implemented a multi-criteria ranking NLP evaluation engine using TOPSIS methodology to score and compare text summarization outputs.</div><div class="tech-stack"><span>Python</span><span>NLP</span><span>TOPSIS</span><span>Pandas</span></div><a href="https://github.com/bhavukm007/TOPSIS-Text-Summarization" target="_blank" class="git-btn">View on GitHub</a></div></div>
+<div class="project-card reveal"><div class="project-top">TOPSIS Multi-Criteria<br>Decision System</div><div class="project-body"><div class="project-mini">ALGORITHMS • RESEARCH</div><div class="project-title">TOPSIS Decision Model</div><div class="project-desc">Reusable implementation of the TOPSIS ranking algorithm for weighted multi-criteria decision making and normalized closeness coefficient ranking.</div><div class="tech-stack"><span>Python</span><span>Algorithms</span><span>Math</span><span>Research</span></div><a href="https://github.com/bhavukm007/Topsis" target="_blank" class="git-btn">View on GitHub</a></div></div>
+</div>
+</section>
+
+<section id="brands">
+<div class="sec-title reveal"><p>BRAND COLLABORATIONS</p><h2>Sponsor & Partnership Wall</h2></div>
+<div class="brand-grid">
+<a href="https://fiatpe.com" class="brand-box reveal" target="_blank"><img src="FiatPe.jpeg"></a>
+<a href="https://morethanwater.in/" class="brand-box reveal" target="_blank"><img src="Waterbox.png"></a>
+<a href="https://www.citroen.in" class="brand-box reveal" target="_blank"><img src="Citroen.png"></a>
+<a href="https://www.hmel.in" class="brand-box reveal" target="_blank"><img src="HMEL.jpg"></a>
+<a href="https://www.digitek.net.in" class="brand-box reveal" target="_blank"><img src="DigiTek.jpg"></a>
+<a href="https://www.orikaflavours.com/" class="brand-box reveal" target="_blank"><img src="Orika.jpg"></a>
+<a href="https://www.unibicfoods.com" class="brand-box reveal" target="_blank"><img src="Unibic.png"></a>
+<a href="https://organicyellow.in/" class="brand-box reveal" target="_blank"><img src="Organic Yellow.png"></a>
+<a href="https://www.tata.com/business/tata-aia" class="brand-box reveal" target="_blank"><img src="TATA AIA.png"></a>
+</div>
+</section>
+
+<section id="achievements">
+<div class="sec-title reveal"><p>RECOGNITION</p><h2>Achievements</h2></div>
+
+<div class="about-grid">
+
+<div class="about-card reveal">
+<h3>Amazon ML Summer School</h3>
+<p>Ranked among the top 5% nationwide after successfully qualifying advanced machine learning evaluations and completing scientist-led modules on deep learning, NLP, computer vision and Generative AI applications.</p>
+</div>
+
+<div class="about-card reveal">
+<h3>Full Tuition Merit Scholarship</h3>
+<p>Secured complete tuition scholarship after achieving exceptional first-year academic standing with institute-level merit performance and one of the highest CGPAs in the department cohort.</p>
+</div>
+
+<div class="about-card reveal">
+<h3>LeetCode Competitive Coding</h3>
+<p>Solved 234+ DSA and algorithmic coding problems with strong contest-driven problem solving across graphs, trees, greedy methods, dynamic programming and advanced optimization patterns.</p>
+</div>
+
+<div class="about-card reveal">
+<h3>McKinsey Forward Program</h3>
+<p>Completed McKinsey's globally recognized business decision acceleration and structured problem solving program focused on leadership thinking, communication frameworks and analytical execution.</p>
+</div>
+
+<div class="about-card reveal">
+<h3>Academic Excellence</h3>
+<p>Maintaining a current CGPA of 9.13 in Computer Engineering with sustained high academic consistency across core programming, mathematics, electronics and systems coursework.</p>
+</div>
+
+<div class="about-card reveal">
+<h3>Leadership Recognition</h3>
+<p>Recognized for leading institutional sponsorship acquisition, corporate visibility execution and high-scale student operational management within one of TIET's flagship entrepreneurship bodies.</p>
+</div>
+
+</div>
+</section>
+
+<section id="leadership">
+<div class="sec-title reveal"><p>EXTRACURRICULAR FIREPOWER</p><h2>Leadership • Marketing • Collaborations</h2></div>
+<div class="timeline">
+<div class="timeline-card reveal"><h3>General Secretary — Entrepreneurship Development Cell</h3><p>Led one of the institute's most active entrepreneurial student verticals by managing cross-functional execution teams, coordinating 150+ recruits, supervising flagship event workflows, handling institutional outreach initiatives and ensuring timeline-bound delivery across multiple projects.</p></div>
+<div class="timeline-card reveal"><h3>Brand Partnerships & Sponsor Closures</h3><p>Personally spearheaded end-to-end sponsor acquisition pipelines involving cold outreach, proposal drafting, pitch communication, sponsor relationship conversion, deliverable structuring and branding fulfillment assurance while generating sponsorship monetization exceeding ₹10L+.</p></div>
+<div class="timeline-card reveal"><h3>Marketing Activations & Public Facing Execution</h3><p>Handled on-ground marketing activations, managed sponsor branding commitments during major institutional events, coordinated logistics, design, public relations and volunteer teams simultaneously while ensuring seamless partnership deliverables and promotional activations.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="sec-title reveal"><p>GET IN TOUCH</p><h2>Contact Me</h2></div>
+<div class="contact-grid">
+<div class="contact-box reveal">
+<h3>Open For Opportunities</h3>
+<a href="mailto:bhavukmahajan007@gmail.com"><i class="fas fa-envelope"></i>bhavukmahajan007@gmail.com</a>
+<a href="tel:+919877874949"><i class="fas fa-phone"></i>+91 98778 74949</a>
+<a href="https://www.linkedin.com/in/bhavuk-m007/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+<a href="https://github.com/bhavukm007" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+<a href="https://leetcode.com/u/bhavukm007/" target="_blank"><i class="fas fa-code"></i>LeetCode</a>
+<a href="https://www.instagram.com/bhavukm007/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+</div>
+<div class="contact-box reveal">
+<form action="https://formspree.io/f/mvzwjvqk" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+
+    <input type="email" name="email" placeholder="Email" required>
+
+    <textarea name="message" placeholder="Message" required></textarea>
+
+    <button type="submit" class="btn btn1">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+
+<footer>© 2026 Bhavuk Mahajan</footer>
+
+<script>
+const canvas=document.getElementById("particles-js"),ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+let particles=[];for(let i=0;i<80;i++){particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2+1,dx:(Math.random()-.5)*.5,dy:(Math.random()-.5)*.5});}
+function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle="rgba(49,242,255,0.5)";particles.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();p.x+=p.dx;p.y+=p.dy;if(p.x<0||p.x>canvas.width)p.dx*=-1;if(p.y<0||p.y>canvas.height)p.dy*=-1;});requestAnimationFrame(animate)}animate();
+function revealElements(){
+    document.querySelectorAll('.reveal').forEach(r=>{
+        if(r.getBoundingClientRect().top < window.innerHeight - 80){
+            r.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealElements);
+window.addEventListener('load', revealElements);const counters=document.querySelectorAll('.counter');
+let started=false;
+
+window.addEventListener('scroll',()=>{
+if(!started && document.querySelector('.metrics').getBoundingClientRect().top<window.innerHeight){
+
+counters.forEach(counter=>{
+const target=parseFloat(counter.getAttribute('data-target'));
+let count=0;
+const inc=target/80;
+
+function update(){
+count+=inc;
+
+if(count<target){
+if(counter.classList.contains('cgpa')){
+counter.innerText=count.toFixed(2);
+}
+else{
+counter.innerText=Math.ceil(count);
+}
+requestAnimationFrame(update);
+}
+else{
+if(counter.classList.contains('cgpa')){
+counter.innerText='9.13';
+}
+else if(counter.classList.contains('amazon')){
+counter.innerText='Top 5%';
+}
+else if(counter.classList.contains('sponsor')){
+counter.innerText='₹10L+';
+}
+else{
+counter.innerText=target+'+';
+}
+}
+}
+update();
+});
+
+started=true;
+}
+});
+</script>
+</body>
+</html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bhavuk Mahajan</title>
+<link rel="icon" type="image/png" href="ADD_FAVICON_HERE.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a2744'/%3E%3Ctext x='2' y='23' font-family='Georgia%2C serif' font-size='17' font-weight='700' fill='%232a9d8f'%3EB%3C/text%3E%3Ctext x='15' y='23' font-family='Georgia%2C serif' font-size='17' font-weight='700' fill='%23ffffff'%3EM%3C/text%3E%3C/svg%3E"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:#040409;color:white;overflow-x:hidden}
+:root{--cyan:#31f2ff;--violet:#8a5cff;--glass:rgba(255,255,255,0.035);--line:rgba(255,255,255,0.08);--muted:#b7bdd3}
+#particles-js{position:fixed;width:100%;height:100%;z-index:-3;top:0;left:0}
+body::before{content:'';position:fixed;width:450px;height:450px;background:rgba(0,255,255,0.07);filter:blur(140px);left:-100px;top:10%;z-index:-2}
+body::after{content:'';position:fixed;width:450px;height:450px;background:rgba(138,92,255,0.07);filter:blur(140px);right:-100px;bottom:10%;z-index:-2}
+nav{position:fixed;top:0;left:0;width:100%;padding:15px 7%;display:flex;justify-content:space-between;align-items:center;background:rgba(4,4,9,0.75);backdrop-filter:blur(12px);z-index:999;border-bottom:1px solid rgba(255,255,255,0.04)}
+.logo{font-family:'Orbitron';font-size:22px;font-weight:800}
+.logo span{color:var(--cyan)}
+nav ul{display:flex;list-style:none;gap:22px}
+nav ul li a{color:#dbe3ff;text-decoration:none;font-size:10px;letter-spacing:1px;transition:.3s}
+nav ul li a:hover{color:var(--cyan)}
+section{padding:72px 8%}
+.sec-title{text-align:center;margin-bottom:32px;position:relative}
+.sec-title::after{content:'';width:90px;height:2px;background:linear-gradient(90deg,var(--cyan),var(--violet));position:absolute;left:50%;transform:translateX(-50%);bottom:-12px}
+.sec-title p{color:var(--cyan);letter-spacing:4px;font-size:9px}
+.sec-title h2{font-family:'Orbitron';font-size:24px;margin-top:8px}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px;padding:105px 8% 55px}
+.hero-left h1{font-family:'Orbitron';font-size:68px;line-height:1.02;letter-spacing:2px;margin:10px 0}
+.hero-left h1 span{background:linear-gradient(90deg,var(--cyan),var(--violet),white);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-left small{font-size:10px;letter-spacing:4px;color:var(--cyan)}
+.hero-left h3{font-size:16px;font-weight:500;margin-bottom:12px;color:#e9eeff}
+.hero-left p{font-size:12px;line-height:1.8;color:var(--muted);max-width:620px}
+.social-row{display:flex;gap:18px;margin:18px 0}
+.social-row a{font-size:18px;color:var(--cyan)}
+.hero-btns{display:flex;gap:14px;margin-top:14px}
+.btn{padding:11px 22px;border-radius:40px;font-size:12px;font-weight:700;text-decoration:none}
+.btn1{background:linear-gradient(90deg,var(--cyan),var(--violet));color:#05050b}
+.btn2{border:1px solid var(--line);color:white}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.metric{background:var(--glass);border:1px solid var(--line);border-radius:20px;min-height:108px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:.4s}
+.metric:hover,.about-card:hover,.timeline-card:hover,.project-card:hover,.contact-box:hover,.brand-box:hover,.skill:hover{transform:translateY(-7px);box-shadow:0 0 24px rgba(49,242,255,0.08)}
+.metric h2{
+font-size:21px;
+color:var(--cyan);
+text-align:center;
+line-height:1.2;
+}
+.metric p{font-size:10px;margin-top:5px}
+.about-grid,.skills-grid,.brand-grid,.projects-grid{display:grid;gap:18px}
+.about-grid{grid-template-columns:repeat(3,1fr)}
+.skills-grid{grid-template-columns:repeat(4,1fr)}
+.brand-grid{grid-template-columns:repeat(3,1fr)}
+.projects-grid{grid-template-columns:repeat(2,1fr)}
+.about-card,.timeline-card,.project-card,.contact-box,.brand-box,.skill{background:var(--glass);border:1px solid var(--line);border-radius:20px;transition:.4s}
+.about-card{padding:22px;min-height:175px}
+.about-card h3{font-size:16px;color:var(--cyan);margin-bottom:10px}
+.about-card p{font-size:12px;line-height:1.7;color:var(--muted)}
+.skill{height:72px;display:flex;justify-content:center;align-items:center;font-size:12px;font-weight:600;text-align:center;padding:10px}
+.timeline{display:flex;flex-direction:column;gap:18px}
+.timeline-card{padding:22px;min-height:170px}
+.timeline-card h3{font-size:17px;color:var(--cyan);margin-bottom:10px}
+.timeline-card p{font-size:12px;line-height:1.85;color:var(--muted)}
+.project-card{overflow:hidden}
+.project-top{height:90px;display:flex;align-items:center;justify-content:center;text-align:center;font-family:'Orbitron';font-size:17px;background:linear-gradient(135deg,rgba(49,242,255,0.15),rgba(138,92,255,0.15))}
+.project-body{padding:18px}
+.project-mini{font-size:9px;letter-spacing:3px;color:var(--cyan);margin-bottom:8px}
+.project-title{font-size:15px;color:var(--cyan);margin-bottom:8px}
+.project-desc{font-size:11px;line-height:1.8;color:var(--muted);margin-bottom:12px}
+.tech-stack{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.tech-stack span{padding:5px 10px;border-radius:20px;font-size:9px;border:1px solid rgba(49,242,255,0.2)}
+.git-btn{display:inline-block;padding:9px 15px;border-radius:30px;font-size:10px;font-weight:700;text-decoration:none;background:linear-gradient(90deg,var(--cyan),var(--violet));color:#05050b}
+.brand-box{height:115px;display:flex;align-items:center;justify-content:center;padding:14px}
+.brand-box img{max-width:125px;max-height:62px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-box{padding:22px;min-height:300px}
+.contact-box h3{font-size:18px;color:var(--cyan);margin-bottom:14px}
+.contact-box a{display:block;color:white;text-decoration:none;font-size:12px;margin:12px 0}
+.contact-box a i{margin-right:10px;color:var(--cyan)}
+input,textarea{width:100%;padding:11px;background:#0b0b14;border:1px solid rgba(255,255,255,0.08);color:white;border-radius:10px;margin-bottom:10px;font-size:12px}
+textarea{height:95px}
+footer{text-align:center;padding:22px;font-size:10px;color:#9ea5c3}
+.reveal{opacity:0;transform:translateY(60px);transition:1s}
+.reveal.active{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<canvas id="particles-js"></canvas>
+
+<nav>
+<div class="logo">B<span>M</span></div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#brands">Brands</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#leadership">Leadership</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-left reveal">
+<small>SOFTWARE • AI • BUSINESS</small>
+<h1>BHAVUK<br><span>MAHAJAN</span></h1>
+<h3>Building Products. Closing Partnerships. Leading Execution.</h3>
+<p>Computer Engineering student at TIET building scalable software systems, AI-powered products, and measurable business impact through strategic sponsorships, brand collaborations, and leadership execution.</p>
+<div class="social-row">
+<a href="https://www.linkedin.com/in/bhavuk-m007/" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/bhavukm007" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://leetcode.com/u/bhavukm007/" target="_blank"><i class="fas fa-code"></i></a>
+<a href="https://www.instagram.com/bhavukm007/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+<div class="hero-btns">
+<a href="#contact" class="btn btn1">Hire / Connect</a>
+<a href="#projects" class="btn btn2">Explore Work</a>
+</div>
+</div>
+<div class="metrics reveal">
+
+<div class="metric"><h2 class="counter cgpa" data-target="9.13">0</h2><p>Current CGPA</p></div>
+
+<div class="metric"><h2 class="counter amazon" data-target="5">0</h2><p>Amazon ML Summer School</p></div>
+
+<div class="metric"><h2 class="counter sponsor" data-target="10">0</h2><p>Sponsorships Closed</p></div>
+
+<div class="metric"><h2 class="counter normal" data-target="30">0</h2><p>Corporate Collaborations</p></div>
+
+<div class="metric"><h2 class="counter normal" data-target="2">0</h2><p>Industry Internships</p></div>
+
+<div class="metric"><h2 class="counter normal" data-target="150">0</h2><p>Students Coordinated</p></div>
+
+</div>
+</section>
+
+<section id="about">
+<div class="sec-title reveal"><p>WHO I AM</p><h2>Beyond The Conventional</h2></div>
+<div class="about-grid">
+<div class="about-card reveal"><h3>Engineering</h3><p>Strong command over backend architectures, AI pipelines, optimization engines, database-driven systems and deployment-oriented software product development.</p></div>
+<div class="about-card reveal"><h3>Business Acumen</h3><p>Hands-on experience in sponsorship acquisition, B2B outreach, proposal creation, pitch communication, strategic negotiations and deliverable execution.</p></div>
+<div class="about-card reveal"><h3>Leadership</h3><p>Led large student teams, managed institutional campaigns, handled recruit coordination and delivered measurable outreach impact through execution-first planning.</p></div>
+</div>
+</section>
+
+<section id="skills">
+<div class="sec-title reveal"><p>TECH ARSENAL</p><h2>Skills & Technologies</h2></div>
+<div class="skills-grid">
+<div class="skill reveal">Python / Flask</div><div class="skill reveal">C++ / SQL / C</div><div class="skill reveal">Machine Learning / GenAI</div><div class="skill reveal">NLP / LLMs</div>
+<div class="skill reveal">React / HTML / CSS / JS</div><div class="skill reveal">YOLOv8 / OpenCV</div><div class="skill reveal">PostgreSQL / DBMS</div><div class="skill reveal">Git / GitHub / APIs</div>
+<div class="skill reveal">Pandas / NumPy</div><div class="skill reveal">Data Structures</div><div class="skill reveal">Marketing / Negotiation</div><div class="skill reveal">Problem Solving</div>
+</div>
+</section>
+
+<section id="experience">
+<div class="sec-title reveal"><p>PROFESSIONAL EXPERIENCE</p><h2>Internships & Industry Exposure</h2></div>
+<div class="timeline">
+<div class="timeline-card reveal"><h3>Software Development Intern — RoboKing</h3><p>Worked extensively on Python-based backend engineering automation to streamline repetitive internal software workflows and reduce manual execution dependencies. Designed modular scripts for process acceleration, integrated runtime validation checkpoints for higher reliability, improved data handling logic, debugged automation bottlenecks, enhanced utility scalability, and contributed toward building cleaner maintainable internal systems used for day-to-day operational software efficiency.</p></div>
+<div class="timeline-card reveal"><h3>Data Analysis Intern — DevRhylme</h3><p>Performed large-scale business data preprocessing, structured normalization, segmentation analysis and trend extraction across campaign datasets to derive actionable performance insights. Generated analytical summaries, interpreted customer behavior patterns, assisted in business reporting dashboards, identified engagement anomalies, evaluated growth indicators, and supported strategic decisions through data-backed reporting and comparative performance interpretation.</p></div>
+</div>
+</section>
+
+<section id="projects">
+<div class="sec-title reveal"><p>GITHUB ENGINEERING WORK</p><h2>Featured Projects</h2></div>
+<div class="projects-grid">
+<div class="project-card reveal"><div class="project-top">Real-Time Weapon<br>Detection System</div><div class="project-body"><div class="project-mini">AI • COMPUTER VISION</div><div class="project-title">Weapon Detection</div><div class="project-desc">AI-powered threat detection platform engineered for identifying weapons from uploaded visual frames using a scalable computer vision pipeline and modular backend.</div><div class="tech-stack"><span>React</span><span>TypeScript</span><span>Vite</span><span>Supabase</span></div><a href="https://github.com/bhavukm007/Weapon-Detection" target="_blank" class="git-btn">View on GitHub</a></div></div>
+<div class="project-card reveal"><div class="project-top">StreamX<br>OTT Platform</div><div class="project-body"><div class="project-mini">FULL STACK • DBMS</div><div class="project-title">StreamX OTT</div><div class="project-desc">Database-driven OTT content streaming prototype supporting authentication, subscription plans, admin content handling and optimized Flask server interactions.</div><div class="tech-stack"><span>Python</span><span>Flask</span><span>PostgreSQL</span><span>SQL</span></div><a href="https://github.com/bhavukm007/StreamX-OTT-Platform" target="_blank" class="git-btn">View on GitHub</a></div></div>
+<div class="project-card reveal"><div class="project-top">Fintech Payment<br>Gateway Dashboard</div><div class="project-body"><div class="project-mini">FINTECH • ML</div><div class="project-title">Payment Gateway Simulation</div><div class="project-desc">End-to-end fintech analytics system simulating payment queue behavior under transaction load with machine learning waiting time prediction dashboard.</div><div class="tech-stack"><span>Python</span><span>SimPy</span><span>ML</span><span>Flask</span></div><a href="https://github.com/bhavukm007/Fintech-Payment-Gateway-Simulation-Dashboard" target="_blank" class="git-btn">View on GitHub</a></div></div>
+<div class="project-card reveal"><div class="project-top">Route Optimization<br>System</div><div class="project-body"><div class="project-mini">AI • GRAPH ALGORITHMS</div><div class="project-title">Route Optimization</div><div class="project-desc">Map-based intelligent routing application using OSM extraction, shortest path computation, second-best route estimation and fuel cost analytics.</div><div class="tech-stack"><span>Python</span><span>OSMnx</span><span>NetworkX</span><span>Folium</span></div><a href="https://github.com/bhavukm007/Route-Optimization-Project" target="_blank" class="git-btn">View on GitHub</a></div></div>
+<div class="project-card reveal"><div class="project-top">TOPSIS Text<br>Summarization Engine</div><div class="project-body"><div class="project-mini">NLP • DECISION SCIENCE</div><div class="project-title">TOPSIS Summarizer</div><div class="project-desc">Implemented a multi-criteria ranking NLP evaluation engine using TOPSIS methodology to score and compare text summarization outputs.</div><div class="tech-stack"><span>Python</span><span>NLP</span><span>TOPSIS</span><span>Pandas</span></div><a href="https://github.com/bhavukm007/TOPSIS-Text-Summarization" target="_blank" class="git-btn">View on GitHub</a></div></div>
+<div class="project-card reveal"><div class="project-top">TOPSIS Multi-Criteria<br>Decision System</div><div class="project-body"><div class="project-mini">ALGORITHMS • RESEARCH</div><div class="project-title">TOPSIS Decision Model</div><div class="project-desc">Reusable implementation of the TOPSIS ranking algorithm for weighted multi-criteria decision making and normalized closeness coefficient ranking.</div><div class="tech-stack"><span>Python</span><span>Algorithms</span><span>Math</span><span>Research</span></div><a href="https://github.com/bhavukm007/Topsis" target="_blank" class="git-btn">View on GitHub</a></div></div>
+</div>
+</section>
+
+<section id="brands">
+<div class="sec-title reveal"><p>BRAND COLLABORATIONS</p><h2>Sponsor & Partnership Wall</h2></div>
+<div class="brand-grid">
+<a href="https://fiatpe.com" class="brand-box reveal" target="_blank"><img src="FiatPe.jpeg"></a>
+<a href="https://morethanwater.in/" class="brand-box reveal" target="_blank"><img src="Waterbox.png"></a>
+<a href="https://www.citroen.in" class="brand-box reveal" target="_blank"><img src="Citroen.png"></a>
+<a href="https://www.hmel.in" class="brand-box reveal" target="_blank"><img src="HMEL.jpg"></a>
+<a href="https://www.digitek.net.in" class="brand-box reveal" target="_blank"><img src="DigiTek.jpg"></a>
+<a href="https://www.orikaflavours.com/" class="brand-box reveal" target="_blank"><img src="Orika.jpg"></a>
+<a href="https://www.unibicfoods.com" class="brand-box reveal" target="_blank"><img src="Unibic.png"></a>
+<a href="https://organicyellow.in/" class="brand-box reveal" target="_blank"><img src="Organic Yellow.png"></a>
+<a href="https://www.tata.com/business/tata-aia" class="brand-box reveal" target="_blank"><img src="TATA AIA.png"></a>
+</div>
+</section>
+
+<section id="achievements">
+<div class="sec-title reveal"><p>RECOGNITION</p><h2>Achievements</h2></div>
+
+<div class="about-grid">
+
+<div class="about-card reveal">
+<h3>Amazon ML Summer School</h3>
+<p>Ranked among the top 5% nationwide after successfully qualifying advanced machine learning evaluations and completing scientist-led modules on deep learning, NLP, computer vision and Generative AI applications.</p>
+</div>
+
+<div class="about-card reveal">
+<h3>Full Tuition Merit Scholarship</h3>
+<p>Secured complete tuition scholarship after achieving exceptional first-year academic standing with institute-level merit performance and one of the highest CGPAs in the department cohort.</p>
+</div>
+
+<div class="about-card reveal">
+<h3>LeetCode Competitive Coding</h3>
+<p>Solved 234+ DSA and algorithmic coding problems with strong contest-driven problem solving across graphs, trees, greedy methods, dynamic programming and advanced optimization patterns.</p>
+</div>
+
+<div class="about-card reveal">
+<h3>McKinsey Forward Program</h3>
+<p>Completed McKinsey's globally recognized business decision acceleration and structured problem solving program focused on leadership thinking, communication frameworks and analytical execution.</p>
+</div>
+
+<div class="about-card reveal">
+<h3>Academic Excellence</h3>
+<p>Maintaining a current CGPA of 9.13 in Computer Engineering with sustained high academic consistency across core programming, mathematics, electronics and systems coursework.</p>
+</div>
+
+<div class="about-card reveal">
+<h3>Leadership Recognition</h3>
+<p>Recognized for leading institutional sponsorship acquisition, corporate visibility execution and high-scale student operational management within one of TIET's flagship entrepreneurship bodies.</p>
+</div>
+
+</div>
+</section>
+
+<section id="leadership">
+<div class="sec-title reveal"><p>EXTRACURRICULAR FIREPOWER</p><h2>Leadership • Marketing • Collaborations</h2></div>
+<div class="timeline">
+<div class="timeline-card reveal"><h3>General Secretary — Entrepreneurship Development Cell</h3><p>Led one of the institute's most active entrepreneurial student verticals by managing cross-functional execution teams, coordinating 150+ recruits, supervising flagship event workflows, handling institutional outreach initiatives and ensuring timeline-bound delivery across multiple projects.</p></div>
+<div class="timeline-card reveal"><h3>Brand Partnerships & Sponsor Closures</h3><p>Personally spearheaded end-to-end sponsor acquisition pipelines involving cold outreach, proposal drafting, pitch communication, sponsor relationship conversion, deliverable structuring and branding fulfillment assurance while generating sponsorship monetization exceeding ₹10L+.</p></div>
+<div class="timeline-card reveal"><h3>Marketing Activations & Public Facing Execution</h3><p>Handled on-ground marketing activations, managed sponsor branding commitments during major institutional events, coordinated logistics, design, public relations and volunteer teams simultaneously while ensuring seamless partnership deliverables and promotional activations.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="sec-title reveal"><p>GET IN TOUCH</p><h2>Contact Me</h2></div>
+<div class="contact-grid">
+<div class="contact-box reveal">
+<h3>Open For Opportunities</h3>
+<a href="mailto:bhavukmahajan007@gmail.com"><i class="fas fa-envelope"></i>bhavukmahajan007@gmail.com</a>
+<a href="tel:+919877874949"><i class="fas fa-phone"></i>+91 98778 74949</a>
+<a href="https://www.linkedin.com/in/bhavuk-m007/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
+<a href="https://github.com/bhavukm007" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+<a href="https://leetcode.com/u/bhavukm007/" target="_blank"><i class="fas fa-code"></i>LeetCode</a>
+<a href="https://www.instagram.com/bhavukm007/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+</div>
+<div class="contact-box reveal">
+<form action="https://formspree.io/f/mvzwjvqk" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+
+    <input type="email" name="email" placeholder="Email" required>
+
+    <textarea name="message" placeholder="Message" required></textarea>
+
+    <button type="submit" class="btn btn1">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+
+<footer>© 2026 Bhavuk Mahajan</footer>
+
+<script>
+const canvas=document.getElementById("particles-js"),ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+let particles=[];for(let i=0;i<80;i++){particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*2+1,dx:(Math.random()-.5)*.5,dy:(Math.random()-.5)*.5});}
+function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle="rgba(49,242,255,0.5)";particles.forEach(p=>{ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();p.x+=p.dx;p.y+=p.dy;if(p.x<0||p.x>canvas.width)p.dx*=-1;if(p.y<0||p.y>canvas.height)p.dy*=-1;});requestAnimationFrame(animate)}animate();
+function revealElements(){
+    document.querySelectorAll('.reveal').forEach(r=>{
+        if(r.getBoundingClientRect().top < window.innerHeight - 80){
+            r.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealElements);
+window.addEventListener('load', revealElements);const counters=document.querySelectorAll('.counter');
+let started=false;
+
+window.addEventListener('scroll',()=>{
+if(!started && document.querySelector('.metrics').getBoundingClientRect().top<window.innerHeight){
+
+counters.forEach(counter=>{
+const target=parseFloat(counter.getAttribute('data-target'));
+let count=0;
+const inc=target/80;
+
+function update(){
+count+=inc;
+
+if(count<target){
+if(counter.classList.contains('cgpa')){
+counter.innerText=count.toFixed(2);
+}
+else{
+counter.innerText=Math.ceil(count);
+}
+requestAnimationFrame(update);
+}
+else{
+if(counter.classList.contains('cgpa')){
+counter.innerText='9.13';
+}
+else if(counter.classList.contains('amazon')){
+counter.innerText='Top 5%';
+}
+else if(counter.classList.contains('sponsor')){
+counter.innerText='₹10L+';
+}
+else{
+counter.innerText=target+'+';
+}
+}
+}
+update();
+});
+
+started=true;
+}
+});
+</script>
+</body>
+</html>
+>>>>>>> 9cbb7b9d0e7f8526d6094f5cf7485be7efdd8767
