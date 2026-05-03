@@ -277,50 +277,52 @@ function revealElements(){
 }
 
 window.addEventListener('scroll', revealElements);
-window.addEventListener('load', revealElements);const counters=document.querySelectorAll('.counter');
-let started=false;
+window.addEventListener('load', revealElements);const counters = document.querySelectorAll('.counter');
+let counterStarted = false;
 
-window.addEventListener('scroll',()=>{
-if(!started && document.querySelector('.metrics').getBoundingClientRect().top<window.innerHeight){
+function runCounters() {
+    if (!counterStarted && document.querySelector('.metrics').getBoundingClientRect().top < window.innerHeight) {
 
-counters.forEach(counter=>{
-const target=parseFloat(counter.getAttribute('data-target'));
-let count=0;
-const inc=target/80;
+        counters.forEach(counter => {
+            const target = parseFloat(counter.getAttribute('data-target'));
+            let count = 0;
+            const inc = target / 80;
 
-function update(){
-count+=inc;
+            function update() {
+                count += inc;
 
-if(count<target){
-if(counter.classList.contains('cgpa')){
-counter.innerText=count.toFixed(2);
-}
-else{
-counter.innerText=Math.ceil(count);
-}
-requestAnimationFrame(update);
-}
-else{
-if(counter.classList.contains('cgpa')){
-counter.innerText='9.13';
-}
-else if(counter.classList.contains('amazon')){
-counter.innerText='Top 5%';
-}
-else if(counter.classList.contains('sponsor')){
-counter.innerText='₹10L+';
-}
-else{
-counter.innerText=target+'+';
-}
-}
-}
-update();
-});
+                if (count < target) {
+                    if (counter.classList.contains('cgpa')) {
+                        counter.innerText = count.toFixed(2);
+                    } else {
+                        counter.innerText = Math.ceil(count);
+                    }
+                    requestAnimationFrame(update);
+                } else {
+                    if (counter.classList.contains('cgpa')) {
+                        counter.innerText = '9.13';
+                    } 
+                    else if (counter.classList.contains('amazon')) {
+                        counter.innerText = 'Top 5%';
+                    } 
+                    else if (counter.classList.contains('sponsor')) {
+                        counter.innerText = '₹10L+';
+                    } 
+                    else {
+                        counter.innerText = target + '+';
+                    }
+                }
+            }
 
-started=true;
+            update();
+        });
+
+        counterStarted = true;
+    }
 }
-});
+
+window.addEventListener('scroll', runCounters);
+window.addEventListener('load', runCounters);
 </script>
 </body>
 </html>
